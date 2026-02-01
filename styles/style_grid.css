@@ -1,0 +1,328 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+	.page {
+		font-family: Arvo, sans-serif; 
+	}
+	.item0 { 
+		grid-area: a; 
+		justify-self: start;
+		width: 625px;
+		padding-left: 6px;
+	}
+	.item1 { 
+		grid-area: header; 
+		justify-self: start;
+		padding-top: 61px;
+		padding-left: 9px;
+	}
+	.item2 { 
+		grid-area: menu;
+		padding-top: 52px;
+		padding-left: 107px;
+	}
+	
+	.header__icon {
+		cursor: pointer;
+	}
+	.menu {
+		width: 0;
+		height: 100vh;
+		background: #B2FE28;
+		position: fixed;
+		top: 0;
+		right: 0;
+		display: flex;
+		flex-direction: column;
+		transition: all 0.3s ease-in-out;
+		z-index: 10;
+	}
+
+	.menu.active {
+		width: 982px;
+	}
+	.menu__container {
+		overflow: auto;
+	}
+	.menu__close {
+		display: none;
+		padding-left: 610px;
+		top:52px;
+		transition: all 0.5s ease-in-out;
+	}
+	.menu__close.active {
+		display: block;
+		padding-left: 610px;
+		top:52px;
+		position: absolute;
+		cursor: pointer;
+	}
+	.menu__list {
+		display: flex;
+		flex-direction: column;
+		gap: 56px;
+	}
+	.menu__link {
+		font-family: "Lato", sans-serif;
+		font-weight: 400;
+		font-size: 32px;
+		line-height: 32px;
+		text-decoration: none; 
+	}
+
+	.menu__wrapper {
+		margin: 241px auto 0 141px;
+	}
+
+	.itemtrendybox { 
+		grid-area: t; 
+		justify-content: end;
+		padding-left: 142px;
+		padding-top: 60px;
+		width: 765px;
+	}
+	.itemtrendyboxim { 
+		grid-area: im;
+	}
+	.itemspbprogulka { 
+		grid-area: t2; 
+		justify-content: end;
+		padding-left: 142px;
+		padding-top: 60px;
+		margin-bottom: 133px;
+		margin-top: 864px;
+		width: 767px;
+	}
+	.itemspbprogulkaim { 
+		grid-area: im2; 
+		margin-top: 864px;
+		margin-bottom: 133px;
+	}
+	.itemaquaclub { 
+		grid-area: t3; 
+		justify-content: end;
+		padding-top: 60px;
+		padding-left: 142px;
+		width: 765px;
+		margin-bottom: 222px;
+	}
+	.itemaquaclubim { 
+		grid-area: im3;
+		margin-bottom: 222px;
+	}
+	.itemexclusive { 
+		grid-area: t4;
+		padding-right: 142px;
+		width: 745px;
+		margin-top: 178px;
+	}
+	.itemexclusiveim {
+		grid-area: im4;
+		justify-content: end;
+	}
+	.item5 { 
+		grid-area: footer; 
+		background: #B2FE28;
+		justify-content: center;
+		width: 1895px;
+		margin-top: 105px;
+	}
+	.item6 { 
+		grid-area: spacer; 
+		justify-self: end;  /* по икс в области двигается*/
+		align-self : start; /* по игрек в области двигается*/
+		padding-top: 48px;
+		padding-right: 9px;
+	}
+	.item7 { 
+		grid-area: spaceleft; 
+	}
+	
+	.circle {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		object-fit: cover;
+	}
+	
+	.buttons {
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		width: 263px;
+		height: 84px;
+		border-radius: 70px;
+		box-shadow: -4px 6px 4px 0px rgba(0, 0, 0, 0.25);
+		background: #B2FE28;
+		color: #000000;
+		border: none;
+		font-family: "Arvo", sans-serif;
+		font-weight: 700;
+		font-size: 32px;
+		transition: all 0.3s ease-in-out;
+	}
+	.buttons:hover {
+		color: #CC79EF;
+		box-shadow: -4px 6px 4px 0px rgba(0, 0, 0, 0.10);
+	}
+	
+	.button_container {
+		display: flex;
+		justify-content: flex-start; 
+		align-items: center; 
+		margin-left: 850px;
+	}
+
+	.button_tg, 
+	.button_vk, 
+	.button_disk {
+		width: 70px;
+		height: 70px;
+		transform: rotate(-0.064deg);
+		flex-shrink: 0;
+		border-radius: 70px;
+		border: 5px solid #FFF;
+		background: lightgray 50% / cover no-repeat;
+		margin-right: 13px;
+		box-shadow: -4px 6px 4px 0px rgba(0, 0, 0, 0.25);
+		margin-right: 13px;
+		margin-top: 46px;
+		margin-bottom: 35px;
+		transition: all 0.3s ease-in-out;
+	}
+
+	.button_tg {
+	  background-image: url(../images/tg.png);
+	}
+	.button_vk {
+	  background-image: url(../images/vk.png);
+	}
+	.button_disk {
+	  background-image: url(../images/disk.png);
+	}
+
+	.button_tg:hover,
+	.button_vk:hover,
+	.button_disk:hover
+	{
+		margin-top: -29px;
+	}
+	
+	.footer_menu_container {
+		display: flex;
+		justify-content: flex-start; 
+		align-items: center; 
+		margin-left: 312px;
+	}
+	.footer_menu{
+		font-family: "Lato", sans-serif;
+		font-size: 24px;
+		font-weight: 400;
+		text-decoration-line: underline;
+		margin-right: 44px;
+		margin-bottom: 35px;
+		transition: all 0.3s ease-in-out;
+	}
+	a {
+		color: rgba(0, 0, 0, 0.71);
+	}
+	a:hover {
+		color: #CC79EF;
+		text-decoration: none; 
+	}
+
+	.grid-container {
+	  display: grid;
+	  grid-template-areas:
+		'spacer header header header header header header header header header menu spaceleft'
+		'spacer a a a a a a a a a a spaceleft'
+		'spacer im im im im im t t t t t spaceleft'
+		'spacer im2 im2 im2 im2 im2 t2 t2 t2 t2 t2 spaceleft'
+		'spacer im3 im3 im3 im3 im3 t3 t3 t3 t3 t3 spaceleft'
+		'spacer t4 t4 t4 t4 t4 im4 im4 im4 im4 im4 spaceleft'
+		'footer footer footer footer footer footer footer footer footer footer footer footer';
+	  column-gap:  20px; /* интервал меж колонками по икс */
+	  grid-template-columns: repeat(12, 7.1667%);
+	  grid-template-rows: 7rem 1fr 3rem;
+	  height: 100vh;
+	}
+
+	.modal {
+	  display: none;
+	  position: fixed;
+	  z-index: 1;
+	  left: 0;
+	  top: 0;
+	  width: 100%;
+	  height: 100%;
+	  overflow: auto;
+	  background-color: rgba(0,0,0,0.5);
+	  animation: dissolve 300ms ease-out;
+	}
+
+	@keyframes dissolve {
+	  from {
+		opacity: 0;
+	  }
+	  to {
+		opacity: 1;
+	  }
+	}
+	
+	 .modal_view {
+		background-color: #E0A8FF;
+		border-radius: 95px;
+		border: 5px solid #000;
+		width: 938px;
+		height: 590px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	  
+	  .button_close {
+		content: url(../images/buttonclose.png);
+		position: absolute;
+		object-fit: cover;
+		margin-left: 795px;
+		margin-top: 62px;
+		margin-bottom: 56px;
+		transition: all 0.3s ease-in-out;
+	}
+	  .button_close:hover {
+		content: url(../images/buttonclosehover.png);
+	}
+	
+	 .modal_content {
+		margin-top: 162px;
+		margin-left: 87px; 
+	}
+	
+	.subscribe__form {
+	  display: flex;
+	}
+
+	.subscribe__input-mail {
+	  margin-top: -22px;
+	  width: 460px;
+	  height: 91px;
+	  color: #000000;
+	  font-family: Lato, sans-serif;
+	  font-weight: 400;
+	  font-size: 28px;
+	  border-radius: 30px;
+	  border: 3px solid #B2FE28;
+	  box-sizing: border-box;
+	  padding-left: 31px;
+	  padding-right: 31px;
+	  outline: 0;
+	}
+	.subscribe__input-mail:focus::placeholder {
+	  color: transparent;
+}
